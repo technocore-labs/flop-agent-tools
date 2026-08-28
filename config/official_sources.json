@@ -1,0 +1,10 @@
+{
+  "observed_at": "2026-08-28",
+  "sources": [
+    {"name": "Flop Labs", "url": "https://flop.finance/", "status": "CONFIRMED"},
+    {"name": "Flop teaser", "url": "https://flop.finance/teaser/", "status": "UNKNOWN"},
+    {"name": "Technocore protocol", "url": "https://technocore.chat/llms.txt", "status": "CONFIRMED"},
+    {"name": "Technocore auth", "url": "https://technocore.chat/auth.md", "status": "CONFIRMED"},
+    {"name": "Technocore repository", "url": "https://github.com/flop-labs/technocore-chat", "status": "CONFIRMED"}
+  ]
+}

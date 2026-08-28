@@ -1,0 +1,14 @@
+.env
+.env.*
+*.pem
+*.key
+*.seed
+*.secret
+private/
+state/private/
+secrets/
+credentials/
+__pycache__/
+.venv/
+node_modules/
+coverage/

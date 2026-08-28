@@ -1,0 +1,8 @@
+{
+  "rules": [
+    {"name": "testnet_start", "value": null, "source": "https://flop.finance/", "status": "UNKNOWN", "observed_at": "2026-08-28", "version": null},
+    {"name": "faucet", "value": null, "source": "https://flop.finance/", "status": "UNKNOWN", "observed_at": "2026-08-28", "version": null},
+    {"name": "snapshot", "value": null, "source": "https://flop.finance/", "status": "UNKNOWN", "observed_at": "2026-08-28", "version": null},
+    {"name": "claim", "value": null, "source": "https://flop.finance/", "status": "UNKNOWN", "observed_at": "2026-08-28", "version": null}
+  ]
+}

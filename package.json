@@ -1,0 +1,14 @@
+{
+  "name": "flop-agent",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "bin": { "flop-agent": "scripts/flop-agent.js" },
+  "scripts": {
+    "test": "node --test",
+    "audit": "node scripts/secret_scan.js",
+    "status": "node scripts/flop-agent.js status",
+    "generate-identity": "node scripts/generate_identity.js",
+    "verify": "node scripts/verify_local.js"
+  }
+}

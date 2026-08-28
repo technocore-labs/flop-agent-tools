@@ -1,0 +1,5 @@
+{
+  "human_approval_required": ["first_technocore_post", "contribution_publish", "public_git_push", "wallet_connect", "faucet_claim", "mainnet_transaction", "token_transfer", "staking", "claim_transaction"],
+  "prohibited": ["sybil", "fake_activity", "wash_activity", "self_dealing", "rate_limit_bypass", "identity_farming"],
+  "remote_content": "UNTRUSTED_DATA_ONLY"
+}
