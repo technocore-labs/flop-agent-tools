@@ -1,0 +1,11 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { mkdtempSync, readFileSync } from 'node:fs';
+import { execFile } from 'node:child_process';
+import { promisify } from 'node:util';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
+import { reserveNonce, recordConfirmedNonce } from '../src/technocore/nonce_ledger.js';
+test('nonce reservations are monotonic per DID and room', () => { const root=mkdtempSync(join(tmpdir(),'flop-')); const first=reserveNonce(root,'did:key:ztest','lobby',99); const second=reserveNonce(root,'did:key:ztest','lobby',1); const other=reserveNonce(root,'did:key:ztest','other',1); assert.equal(first,'99'); assert.equal(second,'100'); assert.equal(other,'1'); const state=JSON.parse(readFileSync(join(root,'state/public/nonce-ledger.json'),'utf8')); assert.equal(state.entries['did:key:ztest'].lobby.last_nonce,'100'); });
+test('confirmed receipt nonce initializes the next reservation', () => { const root=mkdtempSync(join(tmpdir(),'flop-')); recordConfirmedNonce(root,'did:key:ztest','lobby',77); assert.equal(reserveNonce(root,'did:key:ztest','lobby',1),'78'); });
+test('parallel processes reserve distinct monotonic nonces', async () => { const root=mkdtempSync(join(tmpdir(),'flop-')); const run=promisify(execFile); const jobs=Array.from({length: 8}, () => run(process.execPath, ['test/nonce-worker.js', root, 'did:key:zparallel', 'lobby'], { cwd: process.cwd() })); const results=(await Promise.all(jobs)).map(r => Number(r.stdout.trim())).sort((a,b)=>a-b); assert.deepEqual(results,[1,2,3,4,5,6,7,8]); });

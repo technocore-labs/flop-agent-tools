@@ -24,3 +24,5 @@ The proposal is useful and non-duplicative as a small, auditable participation-s
 ## Publication constraints
 
 No public repository push, contribution URL, or Technocore contribution registration is authorized yet.
+
+The approved-send command and receipt schema are now implemented. The historical first introduction has an HTTP 200 receipt; its server metadata and response hash are formally `UNAVAILABLE` because they were not persisted at send time and must not be guessed.

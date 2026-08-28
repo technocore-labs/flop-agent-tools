@@ -9,6 +9,8 @@
     "audit": "node scripts/secret_scan.js",
     "status": "node scripts/flop-agent.js status",
     "generate-identity": "node scripts/generate_identity.js",
-    "verify": "node scripts/verify_local.js"
+    "verify": "node scripts/verify_local.js",
+    "prepublish-audit": "node scripts/prepublish_audit.js",
+    "harden-private-acl": "powershell -ExecutionPolicy Bypass -File scripts/harden_private_acl.ps1"
   }
 }

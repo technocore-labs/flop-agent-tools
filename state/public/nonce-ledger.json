@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "entries": {
+    "did:key:z6MkoBTuwHxdPxuPdCmooe9uQENbd3ZfLEBfdzrkbJj6GqW2": {
+      "lobby": {
+        "last_nonce": "1787881535571",
+        "confirmed_at": "2026-08-28T01:53:52.134Z"
+      }
+    }
+  }
+}
