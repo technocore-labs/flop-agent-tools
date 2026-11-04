@@ -36,6 +36,10 @@ function keyFromDid(did) {
   return createPublicKey({ key: Buffer.concat([Buffer.from('302a300506032b6570032100', 'hex'), raw.subarray(2)]), format: 'der', type: 'spki' });
 }
 function readJson(path) { return JSON.parse(readFileSync(path, 'utf8')); }
+// Git on Windows may check out these text artifacts with CRLF even though the
+// manifest hashes were produced from LF bytes. Normalize text before hashing so
+// the same offline bundle verifies identically on Windows, macOS, and Linux.
+function readNormalizedText(path) { return readFileSync(path, 'utf8').replace(/\r\n/gu, '\n'); }
 function assert(value, message) { if (!value) throw Error(message); }
 function classifyRawRecord(raw) {
   let record;
@@ -64,7 +68,7 @@ export function verifyReport(dir) {
   assert(fileNames.join(',') === readdirSync(bundle).filter(name => name !== 'manifest.json').sort().join(','), 'unexpected/missing file');
   for (const name of fileNames) {
     assert(name === 'README.md' || /^[a-z0-9-]+\.json$/u.test(name), 'unsafe filename');
-    assert(sha(readFileSync(resolve(bundle, name))) === manifest.files[name], `file hash: ${name}`);
+    assert(sha(Buffer.from(readNormalizedText(resolve(bundle, name)), 'utf8')) === manifest.files[name], `file hash: ${name}`);
   }
   const root = sha(Buffer.from(fileNames.map(name => `${name}:${manifest.files[name]}`).join('\n')));
   assert(root === manifest.evidence_root_hash, 'evidence root');
@@ -126,7 +130,7 @@ export function verifyReport(dir) {
   if (manifest.previous_report_hash) {
     assert(/^technocore-[0-9TZ-]+$/u.test(manifest.previous_report_id), 'unsafe previous report id');
     const prior = resolve(bundle, '..', manifest.previous_report_id, 'manifest.json');
-    assert(sha(readFileSync(prior)) === manifest.previous_report_hash, 'report chain');
+    assert(sha(Buffer.from(readNormalizedText(prior), 'utf8')) === manifest.previous_report_hash, 'report chain');
   }
   return { valid: true, report_id: manifest.report_id, verified_samples: verified, classifications, coverage: samples.records.length / samples.eligible_count, evidence_root_hash: root, previous_report_hash: manifest.previous_report_hash, reproducibility: 'SAMPLED_RECORDS_REPRODUCIBLE' };
 }
