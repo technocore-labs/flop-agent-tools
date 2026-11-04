@@ -1,0 +1,54 @@
+[
+  {
+    "claim_id": "sampled-signatures",
+    "claim": "14 of 15 deterministically sampled public records verified under the current verifier; every selected record retains its classification",
+    "classification": "BOUNDED",
+    "evidence_refs": [
+      "samples.json",
+      "verification-results.json"
+    ],
+    "verification_method": "offline Ed25519 verification and explicit structural classification over retained sampled records",
+    "coverage": {
+      "sampled": 15,
+      "verified": 14,
+      "eligible": 24977,
+      "classifications": {
+        "CURRENT_VERIFIED": 14,
+        "LEGACY_VERIFIED": 0,
+        "AMBIGUOUS": 0,
+        "UNSUPPORTED": 1,
+        "INVALID": 0
+      }
+    },
+    "confidence": "SAMPLE_ONLY",
+    "limitations": "Does not prove all export records valid or prove the omitted full export contents."
+  },
+  {
+    "claim_id": "export-shape",
+    "claim": "25002 JSONL records parsed with 0 parse errors",
+    "classification": "OBSERVED",
+    "evidence_refs": [
+      "measurements.json"
+    ],
+    "verification_method": "research agent parser; full raw export not redistributed",
+    "coverage": {
+      "observed_records": 25002
+    },
+    "confidence": "OBSERVED_ONLY",
+    "limitations": "Cannot be independently recomputed offline without the full public export snapshot."
+  },
+  {
+    "claim_id": "retention",
+    "claim": "Retention duration is not established",
+    "classification": "UNKNOWN",
+    "evidence_refs": [
+      "measurements.json"
+    ],
+    "verification_method": "independent temporal captures required",
+    "coverage": {
+      "captures": 2
+    },
+    "confidence": "UNKNOWN",
+    "limitations": "Elapsed time and retention specification are insufficient."
+  }
+]

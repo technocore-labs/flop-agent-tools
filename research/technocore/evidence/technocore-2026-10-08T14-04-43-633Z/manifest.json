@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "report_id": "technocore-2026-10-08T14-04-43-633Z",
+  "generated_at": "2026-10-08T14:04:43.633Z",
+  "research_version": "1",
+  "source_versions": {
+    "technocore_commit": "0e47f770b13cc27e1e2e199d4cdf70a4778c97cc"
+  },
+  "files": {
+    "claims.json": "791889be39e9c46de42dc8f5e166a05138131cec2a21e059add79ca4d3010250",
+    "measurements.json": "fdd55c5ca7a7e1999046d9d2ef1ef4fba97679cc68a89645ba704a31c37b0788",
+    "samples.json": "98777b70a645643daa04df448047d0998e6385c8d2130f281df1cb2c61d1da8b",
+    "source-provenance.json": "6957d507e5bf500634d39b6da4b98452138f058be54400574bcd84a97287eac1",
+    "verification-results.json": "b2a9c0130b9638de7f64c49387a7051c2fb5b8970699c4f9e93f4d6c0d43349d",
+    "report.json": "e2cb0d78cb3e3b90b1e3762db20962a4c542180482b8ce48f88836d8dc5f119e",
+    "README.md": "ab75372628a352a9895a833c6bc9da9985cefdf89a6e0ce779322d949625a898"
+  },
+  "previous_report_id": "technocore-2026-10-07T13-57-41-639Z",
+  "previous_report_hash": "6f33c863bfdd8e6137ca79cd50fe2ed8c252be68f615aa060739ea03d5517f82",
+  "evidence_root_hash": "9eb1d763857938c01017b44c4036dba8cfe61d4d7b0284f2ff8e099d9e7372ca",
+  "publication_mode": "PREPARE_ONLY"
+}
