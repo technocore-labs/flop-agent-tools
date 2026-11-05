@@ -1,0 +1,23 @@
+{
+  "snapshot_id": "de7330a45f8cb6b4985ce1b79ed944590ca30b88582410d22e16341276c43da4",
+  "capture_id": "de7330a45f8cb6b4985ce1b79ed944590ca30b88582410d22e16341276c43da4",
+  "observation_time": "2026-11-05T01:50:28.965Z",
+  "endpoint": "https://technocore.chat/r/technocore/export",
+  "http_status": 200,
+  "room_generation": "0",
+  "record_count": 26516,
+  "oldest_sequence": 21645046,
+  "newest_sequence": 21671561,
+  "schema_fingerprint": "ee7b040c47035daf1e3768fc7bfea632a77a36d5956264f0e3b5e166edf6adba",
+  "schema_variants": 2,
+  "schema_parse_errors": 0,
+  "export_sha256": "fd9ddf787f9d202cfe86be31f49320fdf4f0d3369d6006599d5d3f4701e6a1d3",
+  "export_bytes": 8278716,
+  "previous_capture": {
+    "captured_at": "2026-09-23T15:32:16.436Z",
+    "record_count": 30647,
+    "oldest_sequence": 11615662,
+    "newest_sequence": 11646308,
+    "generation": "0"
+  }
+}
