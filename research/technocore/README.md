@@ -2,31 +2,33 @@
 
 Independent research based on public Technocore exports. Reports are dated, bounded observations; they are not official status reports or claims about all records.
 
-## Latest report — 2026-11-05 13:49 UTC
+## Latest report — 2026-11-13 16:25 UTC
 
-[Open the report bundle](evidence/technocore-2026-11-05T13-49-36-184Z/README.md). In a fixed deterministic sample of 15 signed-record-eligible entries, all 15 signatures verified under the documented rule. This covers about 0.0714% of 21,002 eligible entries and does not establish the validity or completeness of the full export.
+[Open the report bundle](evidence/technocore-2026-11-13T16-25-27-800Z/README.md). In a fixed deterministic sample of 15 signed-record-eligible entries, 14 signatures verified and 1 record retained its unsupported-format classification. This covers about 0.0769% of 19,510 eligible entries and does not establish the validity or completeness of the full export. No sample was replaced.
 
-Compared with the preceding published snapshot at 01:50 UTC, the export contained 5,488 fewer records while the observed sequence window advanced. This is a descriptive difference only; the cause is unknown and retention has not been established.
+The captured export contained 19,510 records, generation 0, with observed sequences 22,711,908–22,731,417. These are capture measurements; the full export is not redistributed, so offline reproduction is limited to retained sample claims. Retention has not been established.
 
-Snapshot: `260313db65513a32b4ab031371808deb13505481806aeabfb3c47c9f67b1de7e`
+Snapshot: `b64ff304749b2f57c816a96ec66012a91854f10686086805a1295b8bda388678`
 
-Technocore source commit: `cd41f86c7d0a4724be57e85f3f5698de8c8c5d83`
+Technocore source commit: `3cd868e9a920fe61ad318d71ced1af11501b8fae`
 
-Evidence root: `78fe6ffc3cc017cd87721f260c6ce32155e72d42af5db3e4fc41affbaa070ce8`
+Evidence root: `e5a8f6cd78d552da361a3d889638380030a9245b8c23f3ba3f6754927119e2fa`
 
-System-wide official freshness remains **PARTIAL**. The 2026-11-05 13:49 UTC cycle recorded a changed Flop Labs homepage content hash, but its semantic significance was not established and the source watermark did not advance. `OFFICIAL_SPEC_CURRENT` is therefore not established. This does not alter the provenance of the dated Technocore capture.
+System-wide official freshness remains **PARTIAL**. The historical verified Flop Labs homepage body is unavailable, so its semantic change and historical continuity remain unknown. Its watermark was not advanced. `OFFICIAL_SPEC_CURRENT` is therefore not established. This does not alter the provenance of the dated Technocore capture.
 
 ## Reproduce offline
 
-From the repository root, run:
+Download the latest report folder, then from that folder run:
 
 ```sh
-node research/technocore/verifier/verify-report.js research/technocore/evidence/technocore-2026-11-05T13-49-36-184Z
+node verifier/verify-report.js .
 ```
 
-The standalone verifier uses Node.js built-ins and the retained bundle. The preceding 2026-11-05 01:50 UTC bundle is included because the manifest links to its manifest hash. The report was published after repository and clean-room offline verification.
+The standalone verifier uses Node.js built-ins and the retained bundle. It includes an ESM package declaration and the previous report manifest, so no Research Agent state or network access is needed. The privacy heuristic recognizes only valid, bounded `REF-YYYYMMDD-HHMM` public identifiers; canonical and signed bytes are unchanged. Phone-like content and other sensitive patterns remain blocked. See the adjacent readiness report for the scoped publication checks.
 
 ## Earlier reports
+
+- [2026-11-05 13:49 UTC report](evidence/technocore-2026-11-05T13-49-36-184Z/README.md) — 15 verified.
 
 - [2026-11-05 01:50 UTC report](evidence/technocore-2026-11-05T01-50-29-138Z/README.md) — 15 verified.
 - [2026-11-04 14:30 UTC report](evidence/technocore-2026-11-04T14-30-01-826Z/README.md) — 14 verified, 1 unsupported.
