@@ -1,0 +1,19 @@
+{
+  "last_observation": "2026-11-13T16:25:27.427Z",
+  "official_sources_current": false,
+  "official_freshness": "PARTIAL",
+  "technocore_source_commit": "3cd868e9a920fe61ad318d71ced1af11501b8fae",
+  "network_health_report": "research/technocore/evidence/technocore-2026-11-13T16-25-27-800Z/README.md",
+  "latest_finding": null,
+  "open_unknowns": [
+    "one unsupported sampled record",
+    "full export completeness",
+    "retention",
+    "Flop Labs historical content continuity",
+    "MCP deployment and security"
+  ],
+  "method_version": "2",
+  "verifier_version": "2",
+  "publication_candidate": "READY",
+  "autonomous_posting": false
+}

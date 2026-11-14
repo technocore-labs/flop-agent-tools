@@ -1,0 +1,2 @@
+# Manifest hashes cover exact bytes. Disable checkout newline conversion.
+research/technocore/evidence/** -text
