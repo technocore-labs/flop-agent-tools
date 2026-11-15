@@ -1,0 +1,15 @@
+{
+  "repository": "flop-labs/technocore-chat",
+  "commit": "3cd868e9a920fe61ad318d71ced1af11501b8fae",
+  "source_hash": "6539d790d089e721e20eb5a6baada34bf696da8528e2fceda962cbdba1d73f3a",
+  "source_hash_kind": "FRESHNESS_EVIDENCE_SHA256",
+  "readme_sha256": null,
+  "readme_commit": null,
+  "source_identity_evidence_sha256": "6539d790d089e721e20eb5a6baada34bf696da8528e2fceda962cbdba1d73f3a",
+  "signing_rule": "room|nonce|text",
+  "source_role": "official specification",
+  "snapshot_role": "untrusted public export",
+  "snapshot_id": "2315d5a56a162cd8c23a3cc035327e75c573f9546581876208dcfe7b83ad48eb",
+  "export_sha256": "885a1dfdfa4e1578b11f63c979a0d380bcb70bf2a67b4a168b1af0b113f013ec",
+  "captured_at": "2026-11-15T02:24:45.256Z"
+}

@@ -1,0 +1,31 @@
+{
+  "report_id": "technocore-2026-11-15T02-24-45-483Z",
+  "publication_candidate": "READY",
+  "real_data": true,
+  "primary_verification": "PASS_15",
+  "independent_verification": "PASS_15_DISTINCT_PARSERS_SHARED_NODE_CRYPTO",
+  "manifest": "PASS",
+  "clean_room_offline_reproduction": "PASS",
+  "privacy": "PASS",
+  "secret_scan": "PASS_SCOPED_ARTIFACT",
+  "absolute_path_scan": "PASS",
+  "evidence_chain": "PASS",
+  "full_tests": {
+    "passed": 445,
+    "failed": 0,
+    "scope": "UNCHANGED_IMPLEMENTATION_PREVIOUS_RUN_TODAY"
+  },
+  "official_spec_freshness": "PARTIAL",
+  "limitations": [
+    "Sample verification does not prove all records valid.",
+    "Full export is not redistributed; total record count and completeness of the eligible set cannot be independently recomputed offline.",
+    "The retained eligible-record hash list permits deterministic selection checking but is not a proof that the source omitted no eligible records.",
+    "Report chain is not externally anchored; it does not by itself prevent rewriting the entire series.",
+    "Retention not established.",
+    "MCP parity not established.",
+    "Contribution Proof canonicalization is separate.",
+    "TCLK settlement not tested.",
+    "FLOP allocation impact unknown."
+  ],
+  "evidence_root_hash": "322472d27d36d8c719ff8d722a89ed9fb5127766fc408a9c57fc2781c76a60d2"
+}
