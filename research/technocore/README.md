@@ -2,6 +2,10 @@
 
 Independent research based on public Technocore exports. Reports are dated, bounded observations; they are not official status reports or claims about all records.
 
+## Latest observation — 2026-11-15 02:24 UTC
+
+[Open the new baseline](evidence/technocore-2026-11-15T02-24-45-483Z/README.md). The normal bounded research cycle captured 26,236 records, with 26,203 signed-record-eligible entries. All 15 fixed deterministic samples verify using exact-nonce verifier v3 (about 0.0572% coverage). Raw sampled records, canonical bytes, signatures and selection metadata are retained. This does not prove all records valid or establish retention, network-wide health, or completeness. System-wide official freshness remains PARTIAL. [Publication gates](reports/technocore-2026-11-15T02-24-45-483Z-readiness.json).
+
 ## Verifier v3 reanalysis — 2026-11-15
 
 [Open the reproducible reanalysis](evidence/technocore-2026-11-15T00-24-40-318Z/README.md). The exact same 15 retained samples from November 13 now verify: **15 CURRENT_VERIFIED**. V3 preserves the original decimal nonce token instead of rounding it through JavaScript Number. No samples were replaced and no new network observation was made. Independent parsing, clean-room replay and a rehashed-tamper rejection check pass. Both verification paths use Node.js crypto; this is not an independent cryptographic backend.
