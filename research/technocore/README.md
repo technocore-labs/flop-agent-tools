@@ -2,7 +2,13 @@
 
 Independent research based on public Technocore exports. Reports are dated, bounded observations; they are not official status reports or claims about all records.
 
-## Latest report — 2026-11-13 16:25 UTC
+## Verifier v3 reanalysis — 2026-11-15
+
+[Open the reproducible reanalysis](evidence/technocore-2026-11-15T00-24-40-318Z/README.md). The exact same 15 retained samples from November 13 now verify: **15 CURRENT_VERIFIED**. V3 preserves the original decimal nonce token instead of rounding it through JavaScript Number. No samples were replaced and no new network observation was made. Independent parsing, clean-room replay and a rehashed-tamper rejection check pass. Both verification paths use Node.js crypto; this is not an independent cryptographic backend.
+
+The original v2 result (14 verified, 1 unsupported) remains below and in its unchanged bundle. The new bundle includes hash-bound original samples and report for offline comparison. Run the included verifier with Node.js 20+ from the new report folder. Its 40-digit nonce bound is a verifier resource limit, not a protocol limit. This result does not establish current network health or full-export validity.
+
+## Original report — 2026-11-13 16:25 UTC
 
 [Open the report bundle](evidence/technocore-2026-11-13T16-25-27-800Z/README.md). In a fixed deterministic sample of 15 signed-record-eligible entries, 14 signatures verified and 1 record retained its unsupported-format classification. This covers about 0.0769% of 19,510 eligible entries and does not establish the validity or completeness of the full export. No sample was replaced.
 
