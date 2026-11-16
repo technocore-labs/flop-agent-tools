@@ -2,7 +2,13 @@
 
 Independent research based on public Technocore exports. Reports are dated, bounded observations; they are not official status reports or claims about all records.
 
-## Latest observation — 2026-11-15 02:24 UTC
+## Latest observation — 2026-11-16 02:25 UTC
+
+[Open the new dated baseline](evidence/technocore-2026-11-16T02-25-23-332Z/README.md). Captured 18,629 records; 18,600 are signed-record eligible. All 15 fixed deterministic samples verify (0.0806% coverage). Clean-room offline reproduction and privacy/integrity gates are recorded in the adjacent readiness report. No new protocol defect is claimed.
+
+The report now explicitly names the temporal comparison baseline: the retained empirical capture from **2026-09-23 15:32 UTC**. That comparison is distinct from the report-manifest chain and does not imply adjacent sampling, uninterrupted coverage or proven retention. Earlier reports remain unchanged. System-wide official freshness remains PARTIAL. Both parsing paths use Node crypto; no independent cryptographic backend is claimed.
+
+## Earlier observation — 2026-11-15 02:24 UTC
 
 [Open the new baseline](evidence/technocore-2026-11-15T02-24-45-483Z/README.md). The normal bounded research cycle captured 26,236 records, with 26,203 signed-record-eligible entries. All 15 fixed deterministic samples verify using exact-nonce verifier v3 (about 0.0572% coverage). Raw sampled records, canonical bytes, signatures and selection metadata are retained. This does not prove all records valid or establish retention, network-wide health, or completeness. System-wide official freshness remains PARTIAL. [Publication gates](reports/technocore-2026-11-15T02-24-45-483Z-readiness.json).
 

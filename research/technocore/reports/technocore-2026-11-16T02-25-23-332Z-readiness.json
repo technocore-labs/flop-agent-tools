@@ -1,0 +1,39 @@
+{
+  "id": "technocore-2026-11-16T02-25-23-332Z",
+  "result": {
+    "valid": true,
+    "report_id": "technocore-2026-11-16T02-25-23-332Z",
+    "verified_samples": 15,
+    "classifications": {
+      "CURRENT_VERIFIED": 15,
+      "LEGACY_VERIFIED": 0,
+      "AMBIGUOUS": 0,
+      "UNSUPPORTED": 0,
+      "INVALID": 0
+    },
+    "coverage": 0.0008064516129032258,
+    "evidence_root_hash": "e83a6efbf985372d71f4a2c7d153878ff02ac0099ec0a32fd76d130fbcda34c5",
+    "previous_report_hash": "96270e88402289593e0f89450c67273b2eb19e31310017b576485d907fb9d47b",
+    "self_contained_verifier": true,
+    "self_contained_previous_manifest": true,
+    "reproducibility": "SAMPLED_RECORDS_REPRODUCIBLE"
+  },
+  "cleanroom": true,
+  "manifest": "PASS",
+  "privacy": "PASS_AUTOMATED",
+  "scoped_secret_scan": "PASS",
+  "absolute_path_scan": "PASS",
+  "evidence_chain": "PASS",
+  "temporal_baseline_explicit": true,
+  "publication_candidate": "READY",
+  "full_tests": {
+    "passed": 449,
+    "failed": 0
+  },
+  "official_spec_freshness": "PARTIAL",
+  "limitations": [
+    "Sample signatures only; no proof of full export completeness, continuous coverage or retention.",
+    "Temporal comparison uses September 23 empirical capture, not necessarily report-chain predecessor.",
+    "Independent parsing shares Node crypto backend."
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "algorithm": "Ed25519",
+  "canonical_rule": "UTF-8(room|nonce|text)",
+  "snapshot_id": "21a9ed99c3da9a32995da7ae023c9c78cbd2d14a62f0ae1eaf0d10c4ed7cdb26",
+  "eligible": 18600,
+  "sampled": 15,
+  "classifications": {
+    "CURRENT_VERIFIED": 15,
+    "LEGACY_VERIFIED": 0,
+    "AMBIGUOUS": 0,
+    "UNSUPPORTED": 0,
+    "INVALID": 0
+  },
+  "sample_results": [
+    {
+      "export_line_index": 0,
+      "record_hash": "f8bf1e08e822d150780a707c1f5075aac375f2493d92671f40c408a394498ce3",
+      "verifier_result": "VERIFIED",
+      "verifier_reason": null,
+      "classification": "CURRENT_VERIFIED",
+      "canonicalization": "PASS"
+    },
+    {
+      "export_line_index": 1328,
+      "record_hash": "fe7f9f0139f73be13ab3bc6230c4eece67f383a9fcaabce22ec07454051dfa5e",
+      "verifier_result": "VERIFIED",
+      "verifier_reason": null,
+      "classification": "CURRENT_VERIFIED",
+      "canonicalization": "PASS"
+    },
+    {
+      "export_line_index": 2686,
+      "record_hash": "3bf1db5364a559acfa85ec682b36b0b7c56b3c208447d16f8530837d971a34d9",
+      "verifier_result": "VERIFIED",
+      "verifier_reason": null,
+      "classification": "CURRENT_VERIFIED",
+      "canonicalization": "PASS"
+    },
+    {
+      "export_line_index": 4014,
+      "record_hash": "bd93c88ced526c47e644c7f410e61b4eaa6cad7c1d3b96c5d20fc1e8cd701092",
+      "verifier_result": "VERIFIED",
+      "verifier_reason": null,
+      "classification": "CURRENT_VERIFIED",
+      "canonicalization": "PASS"
+    },
+    {
+      "export_line_index": 5343,
+      "record_hash": "d387a76a8b24584080a851c8a0deea77e23ac37f70c376c20abf8600832cea7f",
+      "verifier_result": "VERIFIED",
+      "verifier_reason": null,
+      "classification": "CURRENT_VERIFIED",
+      "canonicalization": "PASS"
+    },
+    {
+      "export_line_index": 6671,
+      "record_hash": "fcbdc4dad01f5dc31c117a9b9778cffbb3ab3edaa9c46a1e84ecaa2b7a008d15",
+      "verifier_result": "VERIFIED",
+      "verifier_reason": null,
+      "classification": "CURRENT_VERIFIED",
+      "canonicalization": "PASS"
+    },
+    {
+      "export_line_index": 8000,
+      "record_hash": "8efdf13a8d4dd8a613b5bf66e952d872a9a96a67395ad0d5cb8be07b3ff0679e",
+      "verifier_result": "VERIFIED",
+      "verifier_reason": null,
+      "classification": "CURRENT_VERIFIED",
+      "canonicalization": "PASS"
+    },
+    {
+      "export_line_index": 9328,
+      "record_hash": "6b30c757d7c865bff730f7237e0627c1c5227faec7d44ffd91ece468b69f6ac9",
+      "verifier_result": "VERIFIED",
+      "verifier_reason": null,
+      "classification": "CURRENT_VERIFIED",
+      "canonicalization": "PASS"
+    },
+    {
+      "export_line_index": 10657,
+      "record_hash": "fe486358ea07306b1aa0e1e80bb983fb76d9dc3528680ac5c26e89bb931790f6",
+      "verifier_result": "VERIFIED",
+      "verifier_reason": null,
+      "classification": "CURRENT_VERIFIED",
+      "canonicalization": "PASS"
+    },
+    {
+      "export_line_index": 11985,
+      "record_hash": "6b3707c8959ea3fd00cb73e7ce1b18922e2558fa5bcbae5a9b91b50890a20319",
+      "verifier_result": "VERIFIED",
+      "verifier_reason": null,
+      "classification": "CURRENT_VERIFIED",
+      "canonicalization": "PASS"
+    },
+    {
+      "export_line_index": 13314,
+      "record_hash": "896cac2bc7721386a0b8c30018c188d5aa2b053d1c32947d3b76acacfd9542b5",
+      "verifier_result": "VERIFIED",
+      "verifier_reason": null,
+      "classification": "CURRENT_VERIFIED",
+      "canonicalization": "PASS"
+    },
+    {
+      "export_line_index": 14642,
+      "record_hash": "014987e8d0fb1de26bfae799f2e188cbd6e2a0f4fb38194ecbbd2a05b7432fb3",
+      "verifier_result": "VERIFIED",
+      "verifier_reason": null,
+      "classification": "CURRENT_VERIFIED",
+      "canonicalization": "PASS"
+    },
+    {
+      "export_line_index": 15971,
+      "record_hash": "79e10988b42ef1ac499ec241f42c13d08ed775b36d4bc7783637bf88f4b29e38",
+      "verifier_result": "VERIFIED",
+      "verifier_reason": null,
+      "classification": "CURRENT_VERIFIED",
+      "canonicalization": "PASS"
+    },
+    {
+      "export_line_index": 17299,
+      "record_hash": "6ca611d6b50cf97bc268402cf9ad55680690b61203d5b9d07b459b6a871dab41",
+      "verifier_result": "VERIFIED",
+      "verifier_reason": null,
+      "classification": "CURRENT_VERIFIED",
+      "canonicalization": "PASS"
+    },
+    {
+      "export_line_index": 18628,
+      "record_hash": "b0b8e12c2b78e6845ed52babe3273ca942ea0506fe1b4d35fd56f1d9679a87ee",
+      "verifier_result": "VERIFIED",
+      "verifier_reason": null,
+      "classification": "CURRENT_VERIFIED",
+      "canonicalization": "PASS"
+    }
+  ],
+  "verified": 15,
+  "failed": 0,
+  "coverage": 0.0008064516129032258,
+  "verifier_version": "3",
+  "privacy_scan_pass": true
+}
