@@ -26,3 +26,18 @@ exact-ID receipts, finality and stop/reconciliation rules. The 30-minute target 
 after prerequisites and approvals, not the calendar target date. No actual send.
 Draft deliverable complete; full A-6 acceptance blocked because a real Devnet rehearsal
 requires separate approval and usable access. Continue to A-7 preparation, not A-3b.
+
+## A-7 — read-only diff preparation, scheduling disabled
+
+2026-11-20: added fixed-source bounded public GET collector and offline hash/line-span
+comparison. Paper resolves main then captures an immutable commit; docs URLs are fixed.
+Four requests maximum per invocation, no redirects, no credentials or retries; source
+failures stay UNKNOWN. Existing baselines never advance automatically; local review
+candidates do not ratify economics or create external issues. No scheduler installed.
+Initial manual capture: 4 GETs, 3 BASELINE_MISSING records (paper/timeline/conversion).
+Offline replay: identical text, not proof of historical no-change. Controlled fixtures
+exercise changed text/revisions, integrity failures, inaccessible/oversized sources and
+request bounds. Remaining docs not polled; competitor aggregation outside this ticket.
+Full A-7 ongoing operation and meaningful-change adjudication remain future work.
+
+Validation: final Windows suite 100/100 PASS; secret scan and full-history audit PASS. Offline CLI replay reports zero current requests; historical capture request counts are not current-run usage. No baseline promotion or sending enabled.
