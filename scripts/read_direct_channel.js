@@ -1,0 +1,10 @@
+import {mkdirSync,writeFileSync} from 'node:fs';
+import {resolve} from 'node:path';
+import {randomUUID} from 'node:crypto';
+import {readDirectChannel} from '../src/testnet/readiness/direct_readback.js';
+const [channelId,expectedAgent,expectedMiner]=process.argv.slice(2);
+if(!channelId||!expectedAgent||!expectedMiner)throw Error('Usage: node scripts/read_direct_channel.js <original-channel-id> <expected-agent> <expected-miner>');
+const report=await readDirectChannel({channelId,expectedAgent,expectedMiner});
+const root=resolve(import.meta.dirname,'..','state/intelligence/research');mkdirSync(root,{recursive:true});
+const file=resolve(root,'channel-readback-'+Date.now()+'-'+randomUUID()+'.json');writeFileSync(file,JSON.stringify({...report,checked_at:new Date().toISOString()},null,2),{flag:'wx',mode:0o600});
+const {body,...summary}=report;console.log(JSON.stringify({...summary,evidence_file:file},null,2));
