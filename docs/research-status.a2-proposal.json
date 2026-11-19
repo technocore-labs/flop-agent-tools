@@ -1,0 +1,75 @@
+{
+  "proposal_only": true,
+  "ticket": "A-2",
+  "as_of": "2026-11-19T08:37:19.277Z",
+  "base_research_status_sha256": "cadad2d423633ae36abcbdb8ec15084e380a3b6c109dd0cb8d93d0eedba7eadc",
+  "apply_automatically": false,
+  "proposed_patch": {
+    "official_sources_current": false,
+    "official_freshness": "PARTIAL_SEMANTIC_AND_IMPLEMENTATION_GAPS",
+    "network_status": {
+      "devnet": "LIVE_READ_ONLY_OBSERVED",
+      "testnet": "PLANNED_NOT_ACTIVATION_PROVEN",
+      "mainnet": "NOT_LIVE_PROVEN"
+    },
+    "testnet_launch": {
+      "target_date": "2026-11-24",
+      "confirmed_date": false,
+      "time": "UNKNOWN",
+      "timezone": "UNKNOWN",
+      "subject_to_readiness": true,
+      "source": "https://docs.flop.network/docs/testnet-and-timeline"
+    },
+    "did_requirement": {
+      "same_technocore_did_key": "DOCUMENTED_IN_OFFICIAL_DEVELOPMENT_FAQ",
+      "live_testnet_enforcement": "UNKNOWN",
+      "official_did_to_existing_ss58_binding": "UNKNOWN"
+    },
+    "airdrop_model": {
+      "allocation": "DRAFT_NOT_FINAL",
+      "agent_pool_flop_draft": "1200000000",
+      "genesis_total_flop_draft": "4400000000",
+      "scoring": "SETTLED_COMPUTE_CHANNEL_SPEND_SPECIFICATION",
+      "formula_and_attribution": "UNRESOLVED",
+      "unlock": "SEPARATE_FROM_ALLOCATION; SPEC_RUNTIME_DIFFERENCE_DOCUMENTED",
+      "devnet_airdrop_credit": "NONE"
+    },
+    "testnet_readiness": "NOT_READY",
+    "a3_route": {
+      "preferred": "OFFICIAL_GATEWAY_REST_WITH_EXISTING_USABLE_CREDENTIAL",
+      "currently_executable": false,
+      "blocker": "ISSUER_RECONCILIATION_AND_AUTHENTICATED_ALLOWANCE_REQUIRED",
+      "sdk_required": false,
+      "direct_alternative": "NOT_QUALIFIED_ENDPOINT_AND_RUNTIME_GAPS"
+    },
+    "MCP_status": {
+      "hosted_endpoint": "INITIALIZE_AND_TOOL_DISCOVERY_OBSERVED",
+      "hosted_security": "UNKNOWN",
+      "hosted_agent_pack": "MISSING_ON_CHECK",
+      "local_installation": false,
+      "local_deployment": "NEVER_PROVEN"
+    },
+    "open_unknowns": [
+      "one unsupported sampled record",
+      "full export completeness",
+      "retention",
+      "Flop Labs historical content continuity",
+      "Hosted MCP security and unavailable agent pack",
+      "Official DID-to-wallet binding and Testnet signed HTTP contract",
+      "Gateway allowance recovery, scope and existing unknown outcomes",
+      "Supported direct-session endpoint and client for runtime 1014027",
+      "Final scoring/accounting/attribution and spec-runtime unlock reconciliation",
+      "Confirmed Testnet activation identity and launch time"
+    ],
+    "autonomous_posting": false
+  },
+  "interpretation_gate": {
+    "required": true,
+    "decisions_not_made": [
+      "Testnet eligibility for this DID/wallet combination",
+      "Gateway end-user allocation attribution",
+      "Final score or allocation amount",
+      "Whether to rely on specification or current runtime unlock behavior"
+    ]
+  }
+}

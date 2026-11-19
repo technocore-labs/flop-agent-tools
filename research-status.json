@@ -1,19 +1,80 @@
 {
   "last_observation": "2026-11-13T16:25:27.427Z",
-  "official_sources_current": false,
-  "official_freshness": "PARTIAL",
-  "technocore_source_commit": "3cd868e9a920fe61ad318d71ced1af11501b8fae",
-  "network_health_report": "research/technocore/evidence/technocore-2026-11-13T16-25-27-800Z/README.md",
   "latest_finding": null,
+  "method_version": "2",
   "open_unknowns": [
     "one unsupported sampled record",
     "full export completeness",
     "retention",
     "Flop Labs historical content continuity",
-    "MCP deployment and security"
+    "Hosted MCP security and unavailable agent pack",
+    "Official DID-to-wallet binding and Testnet signed HTTP contract",
+    "Gateway allowance recovery, scope and existing unknown outcomes",
+    "Supported direct-session endpoint and client for runtime 1014027",
+    "Final scoring/accounting/attribution and spec-runtime unlock reconciliation",
+    "Confirmed Testnet activation identity and launch time"
   ],
-  "method_version": "2",
+  "MCP_status": {
+    "hosted_endpoint": "INITIALIZE_AND_TOOL_DISCOVERY_OBSERVED",
+    "hosted_security": "UNKNOWN",
+    "hosted_agent_pack": "MISSING_ON_CHECK",
+    "local_installation": false,
+    "local_deployment": "NEVER_PROVEN"
+  },
+  "airdrop_model": {
+    "devnet_airdrop_credit": "NONE",
+    "formula_and_attribution": "UNRESOLVED",
+    "genesis_total_flop_draft": "4400000000",
+    "scoring": "SETTLED_COMPUTE_CHANNEL_SPEND_SPECIFICATION",
+    "unlock": "SEPARATE_FROM_ALLOCATION; SPEC_RUNTIME_DIFFERENCE_DOCUMENTED",
+    "agent_pool_flop_draft": "1200000000",
+    "allocation": "DRAFT_NOT_FINAL"
+  },
+  "autonomous_posting": false,
+  "a2_proposal_applied": {
+    "interpretation_gate": {
+      "required": true,
+      "decisions_not_made": [
+        "Testnet eligibility for this DID/wallet combination",
+        "Gateway end-user allocation attribution",
+        "Final score or allocation amount",
+        "Whether to rely on specification or current runtime unlock behavior"
+      ]
+    },
+    "approval": "SOV night batch; Muse adoption reported by SOV",
+    "historical_research_fields": "Retained: publication_candidate concerns the prior Technocore artifact, not A-2 or Testnet readiness",
+    "as_of": "2026-11-19T08:37:19.277Z"
+  },
+  "did_requirement": {
+    "official_did_to_existing_ss58_binding": "UNKNOWN",
+    "same_technocore_did_key": "DOCUMENTED_IN_OFFICIAL_DEVELOPMENT_FAQ",
+    "live_testnet_enforcement": "UNKNOWN"
+  },
+  "technocore_source_commit": "3cd868e9a920fe61ad318d71ced1af11501b8fae",
+  "testnet_readiness": "NOT_READY",
+  "network_status": {
+    "testnet": "PLANNED_NOT_ACTIVATION_PROVEN",
+    "devnet": "LIVE_READ_ONLY_OBSERVED",
+    "mainnet": "NOT_LIVE_PROVEN"
+  },
+  "official_freshness": "PARTIAL_SEMANTIC_AND_IMPLEMENTATION_GAPS",
   "verifier_version": "2",
+  "network_health_report": "research/technocore/evidence/technocore-2026-11-13T16-25-27-800Z/README.md",
   "publication_candidate": "READY",
-  "autonomous_posting": false
+  "official_sources_current": false,
+  "testnet_launch": {
+    "confirmed_date": false,
+    "source": "https://docs.flop.network/docs/testnet-and-timeline",
+    "subject_to_readiness": true,
+    "time": "UNKNOWN",
+    "timezone": "UNKNOWN",
+    "target_date": "2026-11-24"
+  },
+  "a3_route": {
+    "preferred": "OFFICIAL_GATEWAY_REST_WITH_EXISTING_USABLE_CREDENTIAL",
+    "currently_executable": false,
+    "sdk_required": false,
+    "blocker": "ISSUER_RECONCILIATION_AND_AUTHENTICATED_ALLOWANCE_REQUIRED",
+    "direct_alternative": "NOT_QUALIFIED_ENDPOINT_AND_RUNTIME_GAPS"
+  }
 }

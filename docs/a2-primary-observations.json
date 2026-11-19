@@ -1,0 +1,205 @@
+{
+  "ticket": "A-2",
+  "as_of": "2026-11-19T08:37:19.271Z",
+  "source_class": "PRIMARY_OFFICIAL_DOCUMENTS_AND_LIVE_OBSERVATIONS",
+  "secondary_sources_used": false,
+  "raw_capture_publication": false,
+  "observations": [
+    {
+      "id": "explorer-health",
+      "url": "https://explorer.devnet.flop.network/api/health",
+      "at": "2026-11-19T08:32:52.911Z",
+      "http": 200,
+      "content_type": "application/json; charset=utf-8",
+      "sha256": "6c9a0ac78c9daef426aee121076e982023bf3dde0c9d59aec0607d846529434d",
+      "bytes": 1199,
+      "file": "explorer-health.body"
+    },
+    {
+      "id": "paper-ref",
+      "url": "https://api.github.com/repos/flop-labs/yellowpaper/git/ref/heads/main",
+      "at": "2026-11-19T08:32:52.925Z",
+      "http": 200,
+      "content_type": "application/json; charset=utf-8",
+      "sha256": "2f2ad6c1175fea694b34bc2427159b550e730fd379f07a657cc17de0e8743c92",
+      "bytes": 340,
+      "file": "paper-ref.body"
+    },
+    {
+      "id": "python-metadata",
+      "url": "https://pypi.org/pypi/flop-sdk/json",
+      "at": "2026-11-19T08:32:52.919Z",
+      "http": 200,
+      "content_type": "application/json",
+      "sha256": "95a79e098486f7c6467dabb2593a8656e2d8e0de3cbb9e40ed53c5a7481adf83",
+      "bytes": 26074,
+      "file": "python-metadata.body"
+    },
+    {
+      "id": "sdk-metadata",
+      "url": "https://registry.npmjs.org/@flop-labs%2fsdk/latest",
+      "at": "2026-11-19T08:32:52.917Z",
+      "http": 200,
+      "content_type": "application/json",
+      "sha256": "49c0a902bde1a00ba0e419d30583f2f74af68803d1ee09320e00eeb9801636a1",
+      "bytes": 5436,
+      "file": "sdk-metadata.body"
+    },
+    {
+      "id": "faucet-chain",
+      "url": "https://faucet.flop.network/chain",
+      "at": "2026-11-19T08:32:52.780Z",
+      "http": 200,
+      "content_type": "application/json; charset=utf-8",
+      "sha256": "a314053738c5c3fc6b8f9324becd0921d232c00361fb15168cc20cf7156794af",
+      "bytes": 399,
+      "file": "faucet-chain.body"
+    },
+    {
+      "id": "api-health",
+      "url": "https://api.flop.network/health",
+      "at": "2026-11-19T08:32:52.913Z",
+      "http": 200,
+      "content_type": "application/json; charset=utf-8",
+      "sha256": "ab936fac80932063b9686f284647ecc71a1ba00529c2e58d09b4ef53316a4c96",
+      "bytes": 557,
+      "file": "api-health.body"
+    },
+    {
+      "id": "releases-feed",
+      "url": "https://flop.network/releases.json",
+      "at": "2026-11-19T08:32:52.922Z",
+      "http": 200,
+      "content_type": "application/json; charset=utf-8",
+      "sha256": "6ce59c13256dc243e31247c376aca88ab1ae04b6e30b901f4cccda2c9e251137",
+      "bytes": 15566,
+      "file": "releases-feed.body"
+    },
+    {
+      "id": "cli-metadata",
+      "url": "https://registry.npmjs.org/@flop-labs%2fcli/latest",
+      "at": "2026-11-19T08:32:54.485Z",
+      "http": 200,
+      "content_type": "application/json",
+      "sha256": "18cab58f709ed7d7b1c3bcd9c4599b7e5c3cf401d9eba29cd4724a920a46dcb6",
+      "bytes": 2578,
+      "file": "cli-metadata.body"
+    },
+    {
+      "id": "faucet-limits",
+      "url": "https://faucet.flop.network/limits",
+      "at": "2026-11-19T08:32:54.580Z",
+      "http": 200,
+      "content_type": "application/json; charset=utf-8",
+      "sha256": "983ebc92d6919cabfe8e0aaa9bf0f1b3907b71ad26f60e5f2ae015c8883d7502",
+      "bytes": 1004,
+      "file": "faucet-limits.body"
+    },
+    {
+      "id": "api-openapi",
+      "url": "https://api.flop.network/openapi.json",
+      "at": "2026-11-19T08:32:54.581Z",
+      "http": 200,
+      "content_type": "application/json; charset=utf-8",
+      "sha256": "260cf883c52d8ca34c6f0546fa46493eb04844f90d2230fe779e50ce7d303af2",
+      "bytes": 52473,
+      "file": "api-openapi.body"
+    },
+    {
+      "id": "session-offers",
+      "url": "https://explorer.devnet.flop.network/api/session-offers?limit=20",
+      "at": "2026-11-19T08:32:54.358Z",
+      "http": 200,
+      "content_type": "application/json; charset=utf-8",
+      "sha256": "ade38fa697d36debb6464d06d8d129edb990cc84be80691b5bff99e1f8827687",
+      "bytes": 10686,
+      "file": "session-offers.body"
+    },
+    {
+      "id": "api-models",
+      "url": "https://api.flop.network/v1/models",
+      "at": "2026-11-19T08:32:55.759Z",
+      "http": 200,
+      "content_type": "application/json; charset=utf-8",
+      "sha256": "7c85f269be6da222df5f48a7c8dd44ea80466249a188d3ecd9858198b204e2d0",
+      "bytes": 10760,
+      "file": "api-models.body"
+    },
+    {
+      "id": "client-metadata",
+      "url": "https://registry.npmjs.org/@flop-labs%2fclient/latest",
+      "at": "2026-11-19T08:32:55.679Z",
+      "http": 200,
+      "content_type": "application/json",
+      "sha256": "3cd3e269bef3e92d5e54591731052d969b42861ddacaa9dd4fc5d43c088d35e6",
+      "bytes": 2239,
+      "file": "client-metadata.body"
+    },
+    {
+      "id": "mcp-1",
+      "url": "https://mcp.flop.network/mcp",
+      "method": "initialize",
+      "at": "2026-11-19T08:33:36.126Z",
+      "http": 200,
+      "sha256": "ba114e29b566275a184c5173fe99527393ffe6aa28d1901d626c608cfdde2108",
+      "bytes": 240
+    },
+    {
+      "id": "mcp-2",
+      "url": "https://mcp.flop.network/mcp",
+      "method": "tools/list",
+      "at": "2026-11-19T08:33:36.458Z",
+      "http": 200,
+      "sha256": "83342db7dc441046ec6ea55f171f408cc77731a01c8178f3476102fddd052db2",
+      "bytes": 24538
+    },
+    {
+      "id": "mcp-3",
+      "url": "https://mcp.flop.network/mcp",
+      "method": "flop_agent_pack_manifest",
+      "at": "2026-11-19T08:34:22.987Z",
+      "http": 200,
+      "sha256": "7638ca6e06054a62f5c5b6c5fcb2ab43f594d5be8986b78105b5691e884b2b78",
+      "bytes": 187
+    },
+    {
+      "id": "mcp-4",
+      "url": "https://mcp.flop.network/mcp",
+      "method": "flop_list_providers",
+      "at": "2026-11-19T08:34:23.296Z",
+      "http": 200,
+      "sha256": "1932d6374462b3aff5aa4cf64d029181171998f288111299d38c45ad04745dfb",
+      "bytes": 138
+    },
+    {
+      "url": "https://raw.githubusercontent.com/flop-labs/yellowpaper/a5b4326d006c471ef01d6262373150412439d33c/yellowpaper.md",
+      "sha": "a5b4326d006c471ef01d6262373150412439d33c",
+      "http": 200,
+      "sha256": "1e5cdf11e4aa9639293c43ff794e3cc63dedb041cfa8602605313837c538a949",
+      "at": "2026-11-19T08:33:34.044Z"
+    },
+    {
+      "url": "https://api.github.com/repos/flop-labs/network/releases?per_page=10",
+      "at": "2026-11-19T08:35:12.660Z",
+      "http": 200,
+      "sha256": "4e754c165211aea9e5fe3af319b1622dbca2f9d695aa16817c00941a35abd8ca"
+    },
+    {
+      "id": "rpc",
+      "url": "wss://rpc.devnet.flop.network",
+      "at": "2026-11-19T08:34:30.156Z",
+      "methods": [
+        "chain_getBlockHash(0)",
+        "state_getRuntimeVersion",
+        "chain_getFinalizedHead"
+      ],
+      "sha256": "a45584d5c0f013f7716b0de91183827bf8b825053dce6ae50ff476d72ff7dd19"
+    }
+  ],
+  "limitations": [
+    "HTTP success is not participation authorization or proof of settlement",
+    "Tool metadata is not a security audit",
+    "Document claims and runtime implementation are separate",
+    "Raw responses retained locally; hashes and selected facts only in this candidate"
+  ]
+}
