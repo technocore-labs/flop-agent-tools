@@ -1,0 +1,146 @@
+{
+  "ticket": "A-0",
+  "base": "ecba776",
+  "files": [
+    {
+      "path": "src/testnet/readiness/airdrop_ledger.js",
+      "sha256": "9ce38509233085d9b751339ac889a986c80480b7a366f00a8926c0850be3ea11"
+    },
+    {
+      "path": "src/testnet/readiness/asset_claim_gate.js",
+      "sha256": "b54d3617ee0e159b57597062ea79672663ad6eecc34760ab58e3b9bfbe403c45"
+    },
+    {
+      "path": "src/testnet/readiness/bounded_body.js",
+      "sha256": "adae1304d069e885cbe93d7be88b6d6d410c9e42f2e44fbf0756f62f8feb6e54"
+    },
+    {
+      "path": "src/testnet/readiness/direct_readback.js",
+      "sha256": "c217506c725dba8860da9a9f1147c40f604a60719148ad3fc5b1c949d6a82bd6"
+    },
+    {
+      "path": "src/testnet/readiness/enrollment_challenge.js",
+      "sha256": "59c8cc574cd1e88c4550f8681a3b57aff341c58a63194db7fee1fefdd3e1223e"
+    },
+    {
+      "path": "src/testnet/readiness/enrollment_diagnostics.js",
+      "sha256": "7ee9793840f04726052f35a6283abdb1a4c6f30eac9050df676d32897a236bc7"
+    },
+    {
+      "path": "src/testnet/readiness/enrollment_result.js",
+      "sha256": "97c28de0ca0e86a254552fc78fcd56e79fe62c656979d0ee689d7de39797cb2d"
+    },
+    {
+      "path": "src/testnet/readiness/execute_one.js",
+      "sha256": "59408f255020a0ec27f362c38bf5c2faae48ed6c9b5906e03c6d185b1f68dabc"
+    },
+    {
+      "path": "src/testnet/readiness/gateway_receipt.js",
+      "sha256": "aa7282257c023672a77bd206aabecfd0d894d9cfde1872583ab1bde7a919864d"
+    },
+    {
+      "path": "src/testnet/readiness/index.js",
+      "sha256": "e7b272a50fc6d3928594ad0b93d82d78781c2a395eff4a607ba04a356cba14ba"
+    },
+    {
+      "path": "src/testnet/readiness/launch_watch.js",
+      "sha256": "060b86eba3ea4eac04e98aa569bcef226524196954319f7c56981c78b2b9dbca"
+    },
+    {
+      "path": "src/testnet/readiness/one_shot.js",
+      "sha256": "cbcbf4b7fe3f9dd82f42d2123f853727726f4f63ca30778f578ab11b8d2df486"
+    },
+    {
+      "path": "src/testnet/readiness/reconcile_one.js",
+      "sha256": "2dce7e04705d53b181c45c07df2991e2dabe05b9168defe0654039cb2260661f"
+    },
+    {
+      "path": "src/testnet/readiness/sdk_registry.js",
+      "sha256": "1dd331729a4b44ae6845c251b83bc5d6ac62a1bb682dd401303ea81511a73519"
+    },
+    {
+      "path": "src/autonomous/evidence_ledger.js",
+      "sha256": "e45f34844f63945344875553843664577cd4d5c0e88bbfd61cc59826e0b7112d"
+    },
+    {
+      "path": "test/airdrop-evidence-ledger.test.js",
+      "sha256": "8da5f1e0b4f44b0ae3d7245675384e82d0cea6cad4682c2ee89ac31fa6d98159"
+    },
+    {
+      "path": "test/bounded-body.test.js",
+      "sha256": "35b3aaada51a7e8e592ad5d7dab745ccf727c0959f07227e2bbe1e09a94a6026"
+    },
+    {
+      "path": "test/direct-preparation.test.js",
+      "sha256": "787c9bfe7a4be59758d435af0d1e490cf948ae8e32a800c85dc878a114631e14"
+    },
+    {
+      "path": "test/enrollment-challenge.test.js",
+      "sha256": "1dad3ec9102a347ddddea5a694d3bbeb9d1834306667c2562bba24d53da44f91"
+    },
+    {
+      "path": "test/enrollment-diagnostics.test.js",
+      "sha256": "c4d48ac86c6e2094f74986fff673cbd2f27d25e64b6ad4ec2d9f3cdba8c1853b"
+    },
+    {
+      "path": "test/enrollment-result.test.js",
+      "sha256": "39ec8c5981e32b62abc3219e237fb4769c02135f805684e0eb4823f6d06b1dc3"
+    },
+    {
+      "path": "test/execute-one.test.js",
+      "sha256": "6d84a5a8d975e53bc34244eec5ea5f53d592d9dbb9e40b2283063ac95511ecfa"
+    },
+    {
+      "path": "test/gateway-receipt.test.js",
+      "sha256": "bc5754022de417addb6cab59c517e3f11e349d6b82db74d1f17c8b69ad42b49d"
+    },
+    {
+      "path": "test/one-shot.test.js",
+      "sha256": "15e2ea2b5ea6d0d03106631226516f24f841fb568a3ab185f6ffa9c5c0d3edee"
+    },
+    {
+      "path": "test/operation-safety-traces.test.js",
+      "sha256": "0abe0311e2eaecae36887cb947d1d42e41758778eed96e565c94f5b25c95f4e7"
+    },
+    {
+      "path": "test/reconcile-one.test.js",
+      "sha256": "0f04c80210a60d39587a672d7708ca7db4734920f1fe7cbe0490289c7cec098a"
+    },
+    {
+      "path": "test/sdk-runtime-compatibility.test.js",
+      "sha256": "d07cd2a68dc40d7922fe6e2a0bf25f93ce06a6ef4e292cb5d40cc3e3cf5e7c59"
+    },
+    {
+      "path": "test/testnet-asset-claim-gate.test.js",
+      "sha256": "911c074ce6d991f6f89316046d4346490e5b03f317f573d2c9e586caeb9e03ec"
+    },
+    {
+      "path": "test/testnet-launch-watch.test.js",
+      "sha256": "0cc4a5a4a91905397674350ce954b65d84afbfa35692ae823d29f148fb928798"
+    },
+    {
+      "path": "test/testnet-readiness.test.js",
+      "sha256": "00dda812288bd382754b03499189819c9aaa66b36bd35e84aead395ffd9c3562"
+    },
+    {
+      "path": "test/testnet-sdk-registry.test.js",
+      "sha256": "1873dc7e3e3ba436c3701b7c88f3463432c5b943adc88c8af21e0e1debdbb719"
+    },
+    {
+      "path": "tools/wallet-proof-verifier/payload-adapter.mjs",
+      "sha256": "e3a3039aeb1c16cf7419c4e88cda7325fec0b139720671ae972c77b548939bbf"
+    },
+    {
+      "path": "scripts/execute_one_inference.js",
+      "sha256": "8910cdea633618a9ca0fec5e61d6aed1ff6e7cddc3d6c9420f4581522590d520"
+    },
+    {
+      "path": "scripts/reconcile_one_inference.js",
+      "sha256": "ec10d58cbf7c1f4545e9357312e749e10844955776efbb78f2b2b8948318fb6f"
+    },
+    {
+      "path": "scripts/read_direct_channel.js",
+      "sha256": "b914166be6cb3bbab4d569d56d5280b8c484916362562a63e581d46f0b1a5ff9"
+    }
+  ]
+}

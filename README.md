@@ -4,6 +4,10 @@ An OSS toolkit for a dedicated Technocore `did:key` identity: safe Ed25519 signi
 
 ## Local workflow
 
+Devnet preparation modules and their validation limits are listed in the
+[A-0 implementation inventory](docs/a0-local-implementation-inventory.md).
+They do not establish live inference, settlement or Testnet eligibility.
+
 ```powershell
 node scripts/generate_identity.js
 npm test
