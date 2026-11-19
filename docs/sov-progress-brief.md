@@ -61,3 +61,16 @@ No approved same-wallet restoration route confirmed in docs/#6. Formal plan docu
 statement signing, request fields, error handling and credential-safe evidence. Existing UI
 auto-submits after signing and saves raw credential responses; not used under this mandate.
 No sends/keys/attempt fences changed. Continue to A-6 tabletop while account state stays UNKNOWN.
+
+## A-6 tabletop rehearsal — complete as read-only review, live rehearsal blocked
+
+2026-11-20 JST: docs/a6-tabletop-review.md maps every draft stage to actual endpoint,
+local command/module and prerequisites. Draft updated for Devnet-only executor, missing
+serialized cost cap, and receipt-ID contract gap (X-Request-ID first vs current completion
+body ID with no header preservation). These are implementation review blockers, not proof
+of a past failed settlement. API health/catalog and faucet chain/limits are readable;
+offer preview returned 503, faucet UI root returned 502. Direct WSS read yielded no valid
+RPC result; no official outage or current runtime identity inferred from that failure.
+No token, challenge, signature or send used. Seven syntax checks and 34/34 targeted offline
+tests PASS. No production code changed, no scheduler enabled, no new results pushed.
+Real Devnet completion and A-3b remain blocked pending separate approval and usable access.

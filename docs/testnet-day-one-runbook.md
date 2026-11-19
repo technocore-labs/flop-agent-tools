@@ -1,6 +1,7 @@
 # A-6 Testnet 初日ランブック — 初稿
 
 作成日: 2026-11-20 JST。状態: DRAFT / NOT EXECUTION AUTHORIZATION。
+第2バッチ机上照合: [検証表と未解決事項](a6-tabletop-review.md)。
 11/24 は条件付き目標。開始時刻・timezone・Testnet genesis は未確定。
 本書は送信手順のレビュー用で、承認や有効な認証情報を代替しない。
 
@@ -24,6 +25,9 @@
 
 承認ポイント G1: ソブが network identity とDID/口座条件をレビュー。
 ドラフトの資格・allocation解釈が必要なら人間判断待ち。未確定を埋めない。
+現行Devnet profileにも verified public genesis/release は未掲載。既知のDevnet hashは
+サービス間照合の比較値でありTestnetの承認済みidentityにはできない。今回の直接WSS読取は
+UNKNOWNで、RPCとの独立照合を完了したとはしない。
 
 ## 2. Faucet
 
@@ -32,6 +36,9 @@ Devnetの25 FLOPや上限をTestnetへ転用しない。請求前残高と未確
 承認ポイント G2: ソブによる今回のfaucet請求の明示承認後に1回だけ実施する。
 request/tx IDと残高差・確定状況を記録。timeout/503/Indexer staleならUNKNOWNとして
 同じ請求を自動再送しない。faucet残高はGateway利用権・airdrop allocationの証明ではない。
+Devnetの読取先は `https://faucet.flop.network/chain` と `/limits`。
+今回両方200だがroot UIは502。UIが利用可能とも請求成功とも認定しない。
+将来の請求先 `/fund` は公式API記述で確認しただけで今回実行していない。
 
 ## 3. 認証・scope・費用
 
@@ -51,15 +58,26 @@ Devnetだけに認めた練習例外をTestnetに転用しない。フィール�
 確保して1回送る。idempotency保証のない再送・別model/別経路への自動fallback禁止。
 completion本文が届いただけではsettledではない。ID、model、usage、応答hashを記録し、
 秘密値・認証header・未審査のprivate responseを記録しない。
+**現行executorはDevnet専用**: `scripts/execute_one_inference.js` は実在するが
+`execute_one.js`はnetwork=DEVNETと既知genesisを固定し、Testnet用の実行経路ではない。
+初日までに別途レビューしたnetwork適合と費用上限の実装検証が必要。
+現在のrequestには `max_cost_flop` が直列化されず、cap確認はoperator attestationにとどまる。
+強制可能な上限の証明がなければG3で停止。今回この送信器は実行しない。
 
 ## 5. Receipt 照合と台帳
 
-同じrequest IDの公式receiptを読み取り、口座・network・model・費用・状態を厳密照合。
+公式契約のreceiptキーは送信時の `X-Request-ID` が優先、なければ `Idempotency-Key`。
+completion本文の `id` と同じだと仮定しない。将来の実行前に相関IDの取得・保存・照合を検証する。
+`GET /v1/keys/me/receipts/{request_id}` のIDは1〜128 printable ASCII（空白なし、`.`/`..`不可）を
+1つのpath segmentとしてURL encodeする。認証なしで口座結果は得られない。
+その同じrequest IDの公式receiptを読み取り、口座・network・model・費用・状態を厳密照合。
 404は非課金の証明ではない。ID不一致、遅延、partial、timeoutはUNKNOWNのまま。
 ledger上のterminal表示とchain finalityを分離し、公式方式が要求するtx/block/finalityを確認。
 検証済み根拠のある段階だけをsettledとする。receiptと必要なchain証拠のhashを台帳に連結。
 台帳・dashboardへ同じ観測状態を反映し、完了していない推論やallocationを成功にしない。
 Devnet rehearsalと報酬対象Testnetの記録を分離する。公開は別承認。
+現行 `reconcile_one_inference.js` はcompletion本文のid/request_idを選択し、
+`runOnce`は応答headerを保持しない。この契約差を解消・検証するまで実receipt照合の準備完了としない。
 
 ## 6. 異常時停止・再開
 
@@ -81,3 +99,5 @@ Devnet rehearsalと報酬対象Testnetの記録を分離する。公開は別承
 未知結果→fence保持、という分岐を文書レビューした。実ネットワークの完走記録ではない。
 マンデートA-6の「Devnetで1回完走」は未達。今回許可は初稿のみで、実送信を禁止している。
 次回は別途承認されたDevnet rehearsalで各段階の時刻・ID・費用・照合根拠を埋める。
+第2バッチでは34件のoffline/mockテストと7ファイルのsyntax確認に合格。
+これは上記の実契約差や費用上限を解消するものではなく、Testnet完走試験ではない。
