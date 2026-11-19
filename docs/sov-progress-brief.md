@@ -41,3 +41,23 @@ request bounds. Remaining docs not polled; competitor aggregation outside this t
 Full A-7 ongoing operation and meaningful-change adjudication remain future work.
 
 Validation: final Windows suite 100/100 PASS; secret scan and full-history audit PASS. Offline CLI replay reports zero current requests; historical capture request counts are not current-run usage. No baseline promotion or sending enabled.
+
+## Night batch 2 — checkpoint synchronization
+
+Operator authorized exact checkpoint pushes: codex/sov-a3a-auth-scope -> 312a34a,
+codex/sov-a6-runbook -> ac08fec, codex/sov-a7-spec-watch -> 689c88f.
+Remote SHAs verified. No additional PR, merge or publication authorized/performed.
+
+## A-3 read-only reconciliation and execution plan
+
+2026-11-20 JST: docs/a3-enrollment-reconciliation-plan.md records public-contract,
+issuer-support and retained sanitized-attempt review. Overall registration remains UNKNOWN;
+the November 18 explicit refusal is attempt-specific, not proof of no earlier allowance.
+Public health 200 but no-state offer preview 503 wallet_enrollment_unavailable. API paths
+provide no anonymous per-wallet registration lookup; authenticated keys/me is blocked by
+no available credential. Challenge GET creates state and was deliberately not called.
+Issue #294 still ends with the existing SOV comment; no issuer reconciliation located.
+No approved same-wallet restoration route confirmed in docs/#6. Formal plan documents exact
+statement signing, request fields, error handling and credential-safe evidence. Existing UI
+auto-submits after signing and saves raw credential responses; not used under this mandate.
+No sends/keys/attempt fences changed. Continue to A-6 tabletop while account state stays UNKNOWN.
