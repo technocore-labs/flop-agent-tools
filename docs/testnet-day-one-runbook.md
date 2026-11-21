@@ -81,3 +81,38 @@ Devnet rehearsalと報酬対象Testnetの記録を分離する。公開は別承
 未知結果→fence保持、という分岐を文書レビューした。実ネットワークの完走記録ではない。
 マンデートA-6の「Devnetで1回完走」は未達。今回許可は初稿のみで、実送信を禁止している。
 次回は別途承認されたDevnet rehearsalで各段階の時刻・ID・費用・照合根拠を埋める。
+
+## 8. 追補（2026-11-22）— 競合観測と直接セッション経路
+
+出典: flop-labs/network の公開 Issue 実読（#399、#501）と、公式 MCP
+（mcp.flop.network）・Gateway・Faucet・Explorer への読み取り専用プローブ
+（2026-11-22 01:02〜01:10 JST、Muse 実施）。秘密値は含まない。
+
+### 8.1 Gateway 経路の実測（競合も同型の dead end）
+
+- キー TTL は約24時間（#399: 発行翌日に `401 api_key_expired`。#501 も同旨）。
+  → enrollment は全準備完了後に取得し、即実行する。T0 直後の取得を前提に組む。
+- 失効後の再登録は `403 devnet_enrollment_expired` / `devnet_allowance_exhausted`
+  で拒否され、回復経路は現時点で無い（#399、#501、公式回答は未着）。
+- 日次 cap 到達は `503 wallet_enrollment_cap_reached`（#399 コメント、RUNECLAW）。
+  503／401／403 は原因が別であり、§6 の異常対応でも区別して記録する。
+- クォータの文書矛盾: llms.txt は最大 20,000 FLOP/24h、OpenAPI は
+  25 FLOP・2 req/min・24h・再登録で更新なし。計画は小さい方に合わせる。
+- 供給は時間変動する: #501 は 2026-11-21 に `/v1/models` 空を観測したが、
+  2026-11-22 01:02 JST の実測では `qwen/qwen2.5-0.5b-instruct` が掲載され
+  capacity も返った。実行直前に models の非空を必須確認とする（§4 の前提に追加）。
+
+### 8.2 直接セッション経路（compute channel）は Devnet で決済実績あり
+
+- 公式 MCP `flop_list_settlements` で `computeChannel.Settled` の実績を確認:
+  agent `5HTwHYfivcHQhc9qYXGizxRZVJ9GWBShRZ3dxoCxFKkWq1J8` → miner
+  `5D7fTgzoUwc7L9tHt7GSBtE9GNYuP1x8xfMmFQFVwLXp85Tp`、escrow 0.1 FLOP、
+  minerPaid 0.085、block 4281989（観測時点 head 4282709）。selfTrade は false
+  だが、運営関係者の rehearsal である可能性は排除できない。
+- 同 miner の session offer は観測時点で active（settledCount 15）。
+  総 HTLC 数は 9,630（indexer stats）。一方 PoI proofs 24h は 0 のままで、
+  channel 決済と PoI は別指標として扱う。
+- この経路は Gateway Bearer を使わない。ただし SOV 側に channel を開く
+  クライアントは未実装で、署名と escrow を伴う状態変更のため、
+  実施には経路設計（A-3 の追加チケット）とソブの明示承認が別途必要。
+  本追補は経路の存在確認であり、実行許可ではない。
