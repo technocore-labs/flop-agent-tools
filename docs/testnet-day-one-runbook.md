@@ -116,3 +116,26 @@ Devnet rehearsalと報酬対象Testnetの記録を分離する。公開は別承
   クライアントは未実装で、署名と escrow を伴う状態変更のため、
   実施には経路設計（A-3 の追加チケット）とソブの明示承認が別途必要。
   本追補は経路の存在確認であり、実行許可ではない。
+
+## 9. 追補：直接セッション実走の結果と Testnet 初日への反映（2026-11-22 未明）
+
+（2026-11-22 02:24〜02:43 JST、ソブ承認のもと PC で実走。詳細は
+`~/workspace/sov/Design_DirectSession_Route_A3c.md` §9。秘密値は含まない。）
+
+- §8.2 の直接セッション経路は実走済みになった。CLI 0.7.2 の
+  `session run --via force` で jakesflop 宛の channel 開設はオンチェーンで
+  成立したが、miner の ack が締切までに返らず ACK_TIMEOUT。
+  `expire_force_open` の自動回収は confirmed で、escrow は全額返金
+  （総コストは手数料のみ約 0.0146 FLOP）。推論完走は miner 側の
+  readiness 待ちという結論は変わらない。
+- **Testnet 初日の最重要注意：署名は ed25519 で行う。** Devnet runtime
+  （spec 1014031、txVersion 2）は Polkadot.js 系クライアントが作る
+  sr25519 署名を `1010 bad signature` で拒否することを実走と再現実験で
+  特定した（miner 側でも Issue #196 で同型の報告）。Testnet の runtime が
+  同系である可能性を前提に、初日から ed25519 keystore を用意し、
+  sr25519 前提の手順（CLI の `--new-wallet` は sr25519 専用）は使わない。
+- CLI のネットワーク既定値は `local`。全コマンドに `--network` の
+  明示指定を必須とする（未指定だと devnet 専用機能が開始直後に弾かれる）。
+- ack タイムアウトは通常起こり得る前提で初日の計画を組む。締切と
+  自動回収が機能することは実証済みで、失敗コストは手数料のみ。
+  結果不明のまま再送せず、先に channel と残高を照合する（§6 の原則どおり）。
