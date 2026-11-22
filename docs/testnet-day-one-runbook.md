@@ -139,3 +139,28 @@ Devnet rehearsalと報酬対象Testnetの記録を分離する。公開は別承
 - ack タイムアウトは通常起こり得る前提で初日の計画を組む。締切と
   自動回収が機能することは実証済みで、失敗コストは手数料のみ。
   結果不明のまま再送せず、先に channel と残高を照合する（§6 の原則どおり）。
+
+## 10. 追補（2026-11-22 夜〜11-23）— Devnet 登録完了・接続キャップ・供給側の実態
+
+（Muse の読み取り照合とソブ承認下の実走に基づく。秘密値は含まない。）
+
+- **Devnet 登録は完了した**：新 ed25519 ウォレットから `registerAgent`
+  （name「SOV」、Autonomous、stake 10 FLOP、status Pending）と
+  `agentWallet.createWallet`（perTx 0.5／daily 2 FLOP、active）を送信し、
+  台帳で照合済み。送信経路は Polkadot.js Extension＋Apps（Talisman は
+  カスタムチェーンのメタデータ不足で署名不可）。Pending→Active は
+  運営側の `verifyAgent`（authority only）で、owner からは変更できない。
+  Testnet でも同じ手順を型の実読から再実施する（パック §4）。
+- **CLI／SDK の接続10秒キャップ**：SDK `connectFlopApi` は接続に10秒の
+  固定タイマーを課す。PC→RPC の接続＋メタデータ取得が10秒を超える環境では
+  素の CLI は常時失敗する（実測16.3秒）。対策は ApiPromise を直接生成する
+  カスタムランナーで、汎用版 `run_session.mjs`（環境変数で RPC・miner・
+  endpoint・indexer を差し替え可能）を Testnet 用に用意済み。
+- **供給側の実態（直接セッション）**：computeChannel の settledTurns を持つ
+  channel は全チェーンで22件のみ・全て約13日以上前の初期テストで、
+  以後の直接セッション settlement 実績は無い。公式 miner ガイドの
+  「Paid sessions are not open yet」と一致する。初日の miner 選定は
+  固定の前提でなく、当日の offers 生存と settled 実績の実読で行う。
+- **Gateway enrollment**：2026-11-23 00:04 時点でも
+  `wallet_enrollment_unavailable`。offer の状態変化を10分間隔で監視し、
+  回復時に即実行できる態勢（準備済みスクリプト＋承認ゲート）を維持する。
